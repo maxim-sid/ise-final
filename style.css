@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-primary: #3a5a50;
+    --color-accent: #6c8e81;
+    --color-logo: #8db6a4;
+
+    --color-background: #1e2a28;
+    --color-background-header: #1b2422;
+    --color-background-menu: #263833;
+    --color-background-left: #304642;
+    --color-background-center: #14201f;
+    --color-background-right: #2f3f3c;
+    --color-background-footer: #253431;
+    --color-surface: #263833;
+    --color-accent-bg: #4d7b6e;
+
+    --color-text-primary: #e8f0ec;
+    --color-text-secondary: #b0bdb8;
+
+    --color-border: #3f504b;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+.website-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 0.3fr 1fr 0.5fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 6;
+    background-color: var(--color-background-header);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar {
+    grid-area: 2 / 1 / 3 / 4;
+    background-color: var(--color-background-menu);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-bar a:hover {
+    color: var(--color-accent);
+}
+
+.left-sidebar {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: var(--color-background-left);
+    padding: 20px;
+    border-right: 1px solid var(--color-border);
+}
+
+.left-sidebar ul {
+    list-style: none;
+}
+
+.left-sidebar .list-header {
+    font-weight: bold;
+    color: var(--color-text-secondary);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.left-sidebar a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.left-sidebar a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: var(--color-background-center);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center > img {
+    margin-top: 20px;
+}
+
+.right-sidebar {
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: var(--color-background-right);
+    padding: 20px;
+    margin: auto;
+}
+
+.right-sidebar>form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    gap: 10px;
+}
+
+.right-sidebar input,
+.right-sidebar textarea {
+    padding: 10px;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.right-sidebar input[type="submit"],
+.right-sidebar input[type="button"] {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right-sidebar input[type="submit"]:hover,
+.right-sidebar input[type="button"]:hover {
+    background-color: var(--color-accent);
+}
+
+.footer {
+    grid-area: 4 / 1 / 5 / 4;
+    background-color: var(--color-background-footer);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer a {
+    color: var(--color-logo);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Ubuntu', 'Quicksand', 'Roboto', sans-serif;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+}
+
+th {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    padding: 12px;
+    text-align: left;
+    font-size: 1.05rem;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-bg);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--color-surface);
+}
+
+.trivia-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trivia-form-header {
+    margin-bottom: 30px;
+}
+
+.trivia-form-dow {
+    margin: 10px 0;
+}
+
+.trivia-form-dow>input,
+.trivia-form-header>input {
+    width: 64px;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-accent);
+    border-radius: 20px;
+    color: var(--color-text-secondary);
+    padding: 5px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.trivia-form-dow>input:focus,
+.trivia-form-header>input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 4px var(--color-accent);
+}
+
+.trivia-form-button {
+    width: 200px;
+    height: 64px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent-bg);
+    color: var(--color-text-primary);
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 30px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To My Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="website-grid">
+        <div class="header">
+            <h1>My Website for Introduction to the Information Systems</h1>
+        </div>
+        <div class="menu-bar">
+            <a href="./index.html">HOME</a>
+            <a href="./portfolio.html">PORTFOLIO</a>
+            <a href="./trivia.html">TRIVIA</a>
+        </div>
+        <div class="left-sidebar">
+            <ul>
+                <li class="list-header">HTML Language/Commands</li>
+                <ul>
+                    <li>
+                        <a target="blank" href="https://www.w3schools.com/html/">W3Schools HTML</a>
+                    </li>
+                    <li>
+                        <a target="blank"
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics">Developer
+                            Mozilla</a>
+                    </li>
+                    <li>
+                        <a target="blank" href="https://www.freecodecamp.org/news/tag/html/">FreeCodeCamp</a>
+                    </li>
+                </ul>
+
+                <li class="list-header">Images, Misc</li>
+                <ul>
+                    <li>
+                        <a target="blank" href="https://giphy.com/">Gifs and pictures</a>
+                    </li>
+                    <li>
+                        <a target="blank" href="https://www.pexels.com/en-us/">Free pictures</a>
+                    </li>
+                    <li>
+                        <a target="blank" href="https://unsplash.com/">Free pictures</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        <div class="center">
+            <form id="sleep-form" class="trivia-form">
+                <label class="trivia-form-header">Sleep Goal (hours per night): <input type="number" id="sleep-goal" value="8"></label>
+                <label class="trivia-form-dow">Monday: <input type="number" id="mon"></label>
+                <label class="trivia-form-dow">Tuesday: <input type="number" id="tue"></label>
+                <label class="trivia-form-dow">Wednesday: <input type="number" id="wed"></label>
+                <label class="trivia-form-dow">Thursday: <input type="number" id="thu"></label>
+                <label class="trivia-form-dow">Friday: <input type="number" id="fri"></label>
+                <label class="trivia-form-dow">Saturday: <input type="number" id="sat"></label>
+                <label class="trivia-form-dow">Sunday: <input type="number" id="sun"></label>
+                <button class="trivia-form-button" type="button" onclick="calculate()">Calculate Sleep Debt</button>
+            </form>
+
+            <p id="result"></p>
+        </div>
+        <div class="right-sidebar">
+            <form action="mailto:">
+                <h1>Contact Me</h1>
+                <input type="text" name="name" id="form-name" placeholder="Write your name" class="to-clear" />
+                <input type="email" name="email" id="form-email" class="to-clear" />
+                <textarea name="message" id="contact-message" cols="30" rows="10" class="to-clear"></textarea>
+                <input type="submit" value="Submit" />
+                <input type="button" onclick="clearFunc()" value="Clear" />
+            </form>
+        </div>
+        <div class="footer">
+            <p>July 20th 2025</p>
+            <a href="https://github.com/maxim-sid" target="_blank">github.com/maxim-sid</a>
+            <a href="https://www.linkedin.com/in/maksym-sydorovv/" target="_blank">linkedin.com/in/maksym-sydorovv</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
