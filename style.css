@@ -12,13 +12,14 @@ html {
     --color-accent: #6c8e81;
     --color-logo: #8db6a4;
 
-    --color-background: #1e2a28;
-    --color-background-header: #1b2422;
-    --color-background-menu: #263833;
-    --color-background-left: #304642;
-    --color-background-center: #14201f;
-    --color-background-right: #2f3f3c;
-    --color-background-footer: #253431;
+    --color-background: #1a1f1d;
+    --color-background-header: #2b1f33;
+    --color-background-menu: #12334f;
+    --color-background-left: #3f2d25;
+    --color-background-center: #1a3320;
+    --color-background-right: #4f2d3a;
+    --color-background-footer: #2e2a1e;
+
     --color-surface: #263833;
     --color-accent-bg: #4d7b6e;
 
